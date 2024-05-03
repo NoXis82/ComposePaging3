@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposePaging3"
 include(":app")
- 
+include(":domain:posts")
+include(":core:domain")
