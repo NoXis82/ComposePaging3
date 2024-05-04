@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kapt)
 }
 
 android {
@@ -39,6 +41,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.kotlinx.serialization)
     implementation(libs.retrofit)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
     implementation(project(":domain:posts"))
     implementation(project(":core:domain"))
     implementation(project(":core:data"))

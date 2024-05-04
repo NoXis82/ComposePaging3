@@ -8,8 +8,9 @@ import com.example.posts.mapper.mapToPostItem
 import com.example.posts.model.PostItem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
-class PostRepositoryImpl(
+class PostRepositoryImpl @Inject constructor(
     private val postApi: PostApi
 ) : PostRepository {
     override fun getAllPosts(): Flow<RequestResult<List<PostItem>, RepositoryError>> = flow {
