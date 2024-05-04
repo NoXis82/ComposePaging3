@@ -9,7 +9,4 @@ interface PostApi {
     @GET("posts")
     suspend fun getAllPosts(): Response<List<PostDto>>
 
-    companion object {
-        const val BASE_URL = "https://jsonplaceholder.typicode.com/"
-    }
 }
