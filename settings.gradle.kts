@@ -23,3 +23,5 @@ rootProject.name = "ComposePaging3"
 include(":app")
 include(":domain:posts")
 include(":core:domain")
+include(":data:posts")
+include(":core:data")
