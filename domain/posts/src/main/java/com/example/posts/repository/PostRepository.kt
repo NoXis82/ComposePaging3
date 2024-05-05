@@ -8,4 +8,5 @@ import kotlinx.coroutines.flow.Flow
 interface PostRepository {
 
     fun getAllPosts(): Flow<RequestResult<List<PostItem>, RepositoryError>>
+
 }

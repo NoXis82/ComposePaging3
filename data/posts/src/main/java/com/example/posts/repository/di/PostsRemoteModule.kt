@@ -1,6 +1,6 @@
 package com.example.posts.repository.di
 
-import com.example.posts.PostApi
+import com.example.posts.api.PostApi
 import com.example.posts.repository.remote.PostsRemoteApi
 import com.example.posts.repository.remote.PostsRemoteImpl
 import dagger.Module

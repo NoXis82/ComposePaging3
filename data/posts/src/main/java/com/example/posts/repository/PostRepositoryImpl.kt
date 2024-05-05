@@ -1,9 +1,10 @@
 package com.example.posts.repository
 
+import androidx.paging.PagingData
+import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.data.safeApiCall
 import com.example.domain.RepositoryError
 import com.example.domain.RequestResult
-import com.example.posts.PostApi
 import com.example.posts.mapper.mapToPostItem
 import com.example.posts.model.PostItem
 import com.example.posts.repository.remote.PostsRemoteApi

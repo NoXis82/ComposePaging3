@@ -53,6 +53,8 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
     implementation(libs.hilt.navigation.compose)
+    implementation(libs.paging.compose)
+    implementation(libs.paging.runtime)
     implementation(project(":domain:posts"))
     implementation(project(":data:posts"))
     implementation(project(":core:domain"))
