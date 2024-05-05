@@ -3,6 +3,7 @@ package com.example.posts.di
 import com.example.posts.PostApi
 import com.example.posts.repository.PostRepository
 import com.example.posts.repository.PostRepositoryImpl
+import com.example.posts.repository.remote.PostsRemoteApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,15 +13,11 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class PostModule {
-
-    @Singleton
-    @Provides
-    fun providePostApi(retrofit: Retrofit): PostApi = retrofit.create(PostApi::class.java)
+object PostModule {
 
     @Provides
     @Singleton
-    fun providePostRepository(postApi: PostApi): PostRepository {
-        return PostRepositoryImpl(postApi)
+    fun providePostRepository(postsRemote: PostsRemoteApi): PostRepository {
+        return PostRepositoryImpl(postsRemote)
     }
 }

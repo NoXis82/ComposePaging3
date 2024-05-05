@@ -18,6 +18,8 @@
             <option value="$PROJECT_DIR$/data/posts" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/domain/posts" />
+            <option value="$PROJECT_DIR$/presentation" />
+            <option value="$PROJECT_DIR$/presentation/posts" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

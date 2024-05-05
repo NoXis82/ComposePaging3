@@ -6,15 +6,16 @@ import com.example.domain.RequestResult
 import com.example.posts.PostApi
 import com.example.posts.mapper.mapToPostItem
 import com.example.posts.model.PostItem
+import com.example.posts.repository.remote.PostsRemoteApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class PostRepositoryImpl @Inject constructor(
-    private val postApi: PostApi
+    private val postsRemote: PostsRemoteApi
 ) : PostRepository {
     override fun getAllPosts(): Flow<RequestResult<List<PostItem>, RepositoryError>> = flow {
-        val result = safeApiCall { postApi.getAllPosts() }
+        val result = safeApiCall { postsRemote.getAllPosts() }
         when (result) {
             is RequestResult.Success -> {
                 emit(RequestResult.Success(result.data?.map { it.mapToPostItem() }))
